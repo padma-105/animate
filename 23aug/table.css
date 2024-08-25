@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{ 
+      background-color: coral;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+input{
+    display: none;
+}
+img{
+    width: 200px;
+   
+    position: relative;
+   
+}
+#rotate:hover~.img{
+    transform: rotate(80deg);
+}
+#skew:hover~.img{
+    transform: skewx(45deg);
+}
+#scale:hover~.img{
+    transform: scale(2,.5);
+}
+#translate:hover~.img{
+    transform: translate(100px,100px);
+}
+.container{
+    width: 500px;
+    height: 400px;
+    background-color: aqua;
+    border: 0px;
+    outline: 2px solid green;
+   
+}
+.img{
+    position: relative;
+    top: 100px;
+    right: 10px;
+    transition: all 2s ease-in-out;
+}
+.parent {
+    text-align: center;
+}
+button{
+    padding: 10px;
+    background-color: chartreuse;
+    border-radius: 10px;
+    outline: 2px red;
+}
