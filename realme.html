@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Google docs</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .dots{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               justify-content: center;
+               display: flex;
+               align-items: center;
+        }
+        .dot{
+            background-color: aqua;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 20px;
+            transition: all .4s ease;
+            animation: dots 2s ease infinite alternate ;
+        }
+        .green{
+             background-color: green;
+             animation-delay: 0.2s;
+        }
+        .violet{
+            background-color: violet;
+            animation-delay: 0.4s;
+        }
+        .yellow{
+            background-color: yellow;
+            animation-delay: 0.6s;
+        }
+        .red{
+            background-color: red;
+            animation-delay: 0.8s;
+        }
+        @keyframes dots{
+          to{
+            transform: translateY(20px);
+          }
+           
+        }
+   
+    </style>
+</head>
+<body>
+       <div class="dots">
+       <div class="dot green"></div>
+       <div class="dot violet"></div>
+       <div class="dot yellow"></div>
+       <div class="dot red"></div>
+       </div>
+</body>
+</html>
