@@ -1,0 +1,66 @@
+body{
+    width: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+   
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4,400px);
+    grid-template-rows: 100px 400px 400px 100px;
+}
+.box{
+  background-color: pink;
+  text-align: center;
+}
+img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+.box1{
+    grid-column: 1/5;
+    background-color: bisque;
+    text-align: center;
+    padding-top: 10px;
+}
+section{
+       background-color: deepskyblue;
+        grid-column:1/5;
+        grid-template-rows: 200px;
+}
+.text{
+    text-align: center;
+    color: aliceblue;
+    font-size: 3rem;
+}
+.mail{
+    float: right;
+    font-size: 2rem;
+    padding: 10px;
+}
+.burger{
+       width: 100px;
+       float: left;
+       padding: 10px;
+}
+h1{
+    color: #fff;
+}
+.ham2{
+    padding: 5px;
+    margin: 5px;
+    background-color: aqua;
+    display: none;
+    width: 200px;
+}
+input{
+    display: none;
+}
+.burger:hover>div{
+    display: block;
+}
