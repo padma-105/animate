@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:brder-box;
+    list-style: none;
+}
+:root{
+    --primary-color: white;
+    --secondary-color: rgb(71, 40, 183);
+    --accent-color: rgb(239, 230, 230);
+   
+}
+
+.top{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 60px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+button,a,li{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+button:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+#image1,#ham{
+    width:40px;
+}
+a{
+    text-decoration: none;
+}
+.one{
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+@media screen and (max-width:600px) {
+            .two{
+                display: none;
+            }
+            .top~.label{
+                display: block;
+             }
+             #image2{
+                max-width: 100%;
+              height: auto;
+            }      
+            
+}
+input,.label{
+    display: none;
+}
+#image2{
+    max-width: 100%;
+  height: auto;
+ 
+}
+.second-one{
+    overflow: hidden;
+    grid-area: overflow;
+  
+}
+
+
+.second-two{
+    grid-area:overflow;
+     z-index: 20;
+     margin-inline-start: 10%;
+    margin-top: 10%;
+    text-overflow: hidden;
+   
+}
+.middle{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr; 
+    grid-template-areas: "overflow";
+    color: var(--secondary-color);
+    align-content: center;
+}
+.image3{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.grid{
+    background-color: var(--accent-color);
+    margin:20px ;
+    overflow: hidden;
+    grid-row-gap: 10px;
+    grid-area: overflow;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:"a a b b" 
+                         "c d e f"   ;
+    align-items: center;
+  text-align: center;
+    border-radius: 20px;
+}
+
+.grid>:nth-child(1){
+    grid-area: a;
+}
+.grid>:nth-child(2){
+    grid-area: b;
+}
+.grid>:nth-child(3){
+    grid-area: c;
+}
+.grid>:nth-child(4){
+    grid-area: d;
+}
+.grid>:nth-child(5){
+    grid-area: e;
+}
+h1{
+    color: var(--primary-color);
+}
+h3{
+    color: var(--secondary-color);
+}
+.grid>:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 18px;
+}
