@@ -3,20 +3,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Uchen', serif;
+    font-family: "karma",Arial, Helvetica, sans-serif;
+}
+:root{
+    --primary-color: white;
+    --secondary-color: #a1dd70;
+    --accent-color:#e8ecd6;
+    --dark-color: #a23131;
 }
 .all-content{
-    background:green;
+    background:var(--accent-color);
+    
 }
 /* navbar */
 #navbar{
-    background-color:lime;
+    background-color:var(--secondary-color);
     padding-left: 60px;
     font-weight: bold;
 }
 #logo{
     font-size: 23px;
-    color: white;
+    color:var(--primary-color);
 }
 #logo img{
     margin-bottom: 15px;
@@ -25,15 +32,15 @@
     margin-left: 10px;
 }
 .nav-link{
-    color: white;
+    color: var(--primary-color);
     font-weight: bold;
-    text-shadow: 1px 1px 1px black;
+   
     margin-left: 15px;
     transition: 0.5s ease;
 }
 .nav-link:hover{
-    background-color: lime;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
     border-radius: 5px;
 }
 .icons{
@@ -42,7 +49,7 @@
 .icons img{
     margin-left: 10px;
     transition: 0.5s ease;
-    cursor: pointer;
+   
 }
 .icons img:hover{
     transform: translateY(-5px);
@@ -72,36 +79,29 @@
 .home .img img{
     width: 100%;
     border-radius: 50%;
+    transition: all 0.5s;
+  
 }
+img:hover {
+    transform: skew(45deg,45deg);
+  }
 .home .content{
     flex: 1 1 400px;
-    margin-left: 60px;
+    margin-left: 50px;
 }
 .content h3{
-    color: white;
+    color: var(--dark-color);
     font-size: 60px;
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
 }
 .content h2{
     font-size: 60px;
-    color: white;
+    color: var(--dark-color);
     text-shadow: 1px 1px 1px black;
     font-weight: bold;
 }
-.changecontent::after{
-    content: ' ';
-    color: lime;
-    animation: changetext 10s infinite linear;
-    font-weight: bold;
-}
-@keyframes changetext{
-    0%{content: "Neem Tree";}
-    20%{content: "Black locust";}
-    50%{content: "Silver Mapple";}
-    60%{content: "Magnolia";}
-    100%{content: "Baobab";}
-}
+
 .content p{
     color: white;
     font-weight: bold;
@@ -110,7 +110,7 @@
 .content .btn{
     width: 110px;
     height: 38px;
-    background-color: lime;
+    background-color: var(--secondary-color);
     color: white;
 }
 @media screen and (max-width:800px){
@@ -179,24 +179,24 @@
     margin-top: 60px;
 }
 .banner .content h3{
-    color: lime;
+    color: var(--secondary-color);
     font-weight: bold;
 }
 .banner .content h2{
     font-size: 50px;
-    color: rgb(10, 227, 39);
+    color: var(--secondary-color);
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
 }
 .banner .content p{
-    color: white;
+    color: var(--primary-color);
 }
 #btnorder button{
     width: 150px;
     height: 32px;
     letter-spacing: 5px;
-    background-color: lime;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -217,12 +217,12 @@
     text-align: center;
     font-weight: bold;
     margin-top: 50px;
-    color: rgb(21, 232, 21);
+    color: var(--dark-color);
     text-shadow: 1px 1px 1px black;
     border-bottom: 2px solid rgb(243, 239, 237);
 }
 #product-cards .card{
-    background-color: rgba(118, 219, 16, 0.813);
+    background-color:var(--secondary-color);
     box-shadow: 0 0 3px black;
     border-radius: 5px;
     cursor: pointer;
@@ -241,14 +241,13 @@
     transition: 0.5s ease;
 }
 .overlay i img{
-    background-color: #2e1700;
+    background-color: var(--secondary-color);
     height: 30px;
     width: 30px;
     font-size: 20px;
     padding: 7px;
     margin: -20%;
     margin-bottom: 5%;
-    cursor: pointer;
 }
 .overlay .btn-secondary{
     background: transparent !important;
@@ -256,14 +255,14 @@
     box-shadow: none;
 }
 #product-cards h3{
-    color: white;
-    text-shadow: 1px 1px 1px black;
+    color:var(--dark-color);
+   
 }
 .star .checked{
      color: yellow;
 }
 #product-cards p{
-    color: #2e1700;
+    color: black;
     font-weight: bold;
 }
 #product-cards h6{
@@ -291,34 +290,37 @@
 
 /* product cards end */
 
-/* gallary */
-#gallary{
-    margin-top: 50px;
-}
-#gallary h1{
-    text-align: center;
-    font-weight: bold;
-    margin-top: 50px;
-    color: lime;
-    text-shadow: 1px 1px 1px black;
-    border-bottom: 2px solid greenyellow;
-}
-#gallary .card{
-    box-shadow: 3px 3px 3px black;
-    cursor: pointer;
-}
-#gallary .overlay{
-    opacity: 0;
+.c1image{
     width: 100%;
-    color: white;
-    text-shadow: 1px 1px 1px black;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease;
+    overflow: hidden;
 }
-#gallary .card:hover .overlay{
-    opacity: 5;
-    margin-top: 20%;
-    transition: 0.5s ease;
+
+.c1image:hover{
+    transform: scale(1.2);
+    filter: brightness(70%);
 }
-/* gallary */
+.row>div{
+    overflow: hidden;
+}
+#h1{
+    font-size: 3rem;
+    color: #a23131;
+    font-weight: bolder;
+}
+/* carousel start */
+  .one{
+     width: 100%;
+     height:100%;
+     overflow: hidden;
+  }
+  .carousel{
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+/* carousel end */
 
 /* about */
 #about{
@@ -328,27 +330,23 @@
     text-align: center;
     font-weight: bold;
     margin-top: 50px;
-    color: rgb(31, 181, 31);
+    color: var(--dark-color);
     text-shadow: 1px 1px 1px black;
     border-bottom: 2px solid greenyellow;
 }
-#about .card{
-    background-color: greenyellow;
-    box-shadow: 0px 0px 5px black;
-}
+
 #about p{
-    color: lawngreen;
-    text-shadow: 1px 1px 1px black;
-    font-weight: bold;
+    color: black;
+
 }
 #bt button{
     width: 150px;
     height: 32px;
     letter-spacing: 3px;
-    background-color: rgb(75, 235, 75);
+    background-color: var(--secondary-color);
     color: white;
     border: none;
-    cursor: pointer;
+   
 }
 @media screen and (max-width:1000px){
     #about p{
@@ -363,52 +361,13 @@
 /* about */
 
 /* contact */
-#contact{
-    margin-top: 100px;
-}
-#contact h1{
-    text-align: center;
-    font-weight: bold;
-    margin-top: 50px;
-    color: rgb(52, 237, 19);
-    text-shadow: 1px 1px 1px black;
-    border-bottom: 2px solid greenyellow;
-}
-#contact input{
-    background-color:lime;
-}
-#contact input::placeholder{
-    color: white;
-}
-#contact textarea{
-    background-color:limegreen;
-}
-#contact textarea::placeholder{
-    color: white;
-}
-#messagebtn{
-    text-align: center;
-}
-#messagebtn button{
-    width: 200px;
-    height: 30px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    transition: 0.5s;
-    cursor: pointer;
-}
-#messagebtn button:hover{
-    background-color: rgba(161,109,14,1);
-}
+
 /* contact */
 
 /* footer */
 #footer{
     width: 100%;    
-    background-color:rgb(154, 222, 52);
+    background-color:var(--secondary-color);
     box-shadow: 0px 0px 5px black;
     margin-top: 100px;
 }
@@ -417,11 +376,11 @@
     padding-top: 30px;
 }
 #footer p{
-    color: white;
+    color: var(--primary-color);
 }
 .icons i{
     background-color: white;
-    color: lime;
+    color: var(--secondary-color);
     border-radius: 50px;
     padding: 6px;
     font-size: 30px;
@@ -429,15 +388,15 @@
     cursor: pointer;
 }
 .icons i:hover{
-    background-color:lightgreen;
-    color: white;
+    background-color:var(--dark-color);
+    color: var(--primary-color);
 }
 .copyright{
-    color: white;
+    color: var(--primary-color);
     margin-top: 20px;
 }
 .credite{
-    color: white;
+    color: var(--primary-color);
 }
 /* footer */
 html{
